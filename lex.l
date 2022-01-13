@@ -19,6 +19,8 @@ D           [ ]+
 "**"        return T_POWER;
 "*"         return T_TIMES;
 "/"         return T_DIV;
+"("         return T_OPEN_BRACKET;
+")"         return T_CLOSE_BRACKET;
 {D}         {;}
 
 .           ERRO("erro lexico");
