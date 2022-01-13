@@ -1,0 +1,5 @@
+*.output
+syntax.c
+syntax.h
+lex.c
+math
