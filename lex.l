@@ -21,6 +21,7 @@ D           [ ]+
 "/"         return T_DIV;
 "("         return T_OPEN_BRACKET;
 ")"         return T_CLOSE_BRACKET;
+"!"         return T_EXP;
 {D}         {;}
 
 .           ERRO("erro lexico");

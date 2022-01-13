@@ -26,6 +26,7 @@ void newast(struct Node *);
 %token T_TIMES
 %token T_DIV
 %token T_POWER
+%token T_EXP
 
 %token T_OPEN_BRACKET
 %token T_CLOSE_BRACKET
@@ -44,6 +45,7 @@ expr: expr T_PLUS expr { $$ = $1 + $3; }
     | expr T_DIV expr { $$ = $1 / $3; }
     | expr T_POWER term { $$ = pow($1, $3); }
     | T_OPEN_BRACKET expr T_CLOSE_BRACKET { $$ = $2; }
+    | expr T_EXP { $$ = $1 * $1; }
     | term
     ;
 
