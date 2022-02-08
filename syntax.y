@@ -9,13 +9,6 @@
 int yywrap();
 void yyerror(char*);
 
-struct Node {
-    int nodetype;
-    struct Node *c1;
-    struct Node *c2;
-};
-
-void newast(struct Node *);
 %}
 
 %start S
